@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Example</title>
+    <!-- Font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      p {
+        margin-bottom: 0px;
+      }
+      a {
+        text-decoration: none;
+        list-style: none;
+      }
+      .c-item {
+        height: 88vh;
+      }
+      .c-img {
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+      }
+      .heading-title {
+        margin: 0 auto 80px;
+        height: 120px;
+        width: 80%;
+        max-width: 550px;
+        background: #fff;
+        position: relative;
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 50, 0.5);
+      }
+      .heading-title::before {
+        content: "";
+        height: 100px;
+        width: 200px;
+        background-color: #f80f0f;
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        z-index: -1;
+      }
+      .heading-title::after {
+        content: "";
+        height: 100px;
+        width: 200px;
+        background-color: #f80f0f;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        z-index: -1;
+      }
+      .heading-title h1 {
+        text-align: center;
+        margin-top: 100px;
+        padding: 35px 0;
+      }
+      .achievement-body {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+      }
+
+      .achievement-icon i {
+        font-size: 30px;
+        background: #ec1111;
+        color: white;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        border-radius: 50px;
+        text-align: center;
+      }
+
+      .achievement-text h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .achievement-text h5 {
+        font-size: 1rem;
+        color: #666;
+      }
+      .event-section {
+        padding: 50px 0;
+      }
+
+      .event-title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .btn-all {
+        float: right;
+      }
+
+      .event-card {
+        margin-bottom: 20px;
+      }
+
+      .event-card img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .countdown {
+        font-size: 1rem;
+        color: #ff4d29;
+      }
+      .blood-request-section {
+        padding: 50px 0;
+      }
+
+      .blood-request-title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .btn-all {
+        float: right;
+      }
+
+      .blood-request-card {
+        margin-bottom: 20px;
+      }
+
+      .blood-request-card img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .donate_btn {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .donate_btn a {
+        border-radius: 22px;
+        padding: 6px 14px;
+        background-color: #ec1111;
+        border-color: #ec1111;
+      }
+      .customer-logo {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+
+      .our-slide {
+        flex: 0 0 auto;
+        width: 200px; /* Adjust the width as needed */
+        margin-right: 20px; /* Adjust the margin as needed */
+      }
+
+      .our-slide img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/slider/WhatsApp-Image-2023-08-05-at-5.41.06-PM.jpeg"
+            class="d-block w-100 c-img"
+            alt="Slide-image"
+          />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase text-white">
+              JAHANGIRNAGAR UNIVERSITY | SMART DONOR SYSTEM INTRODUCING
+            </p>
+            <h1 class="display-1 fw-bolder text-capitalize">Introducing</h1>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
+              Start with us
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/slider/IMG-20230815-WA0098.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide-image"
+          />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase text-white">DENGU</p>
+            <h1 class="display-1 fw-bolder text-capitalize">Awareness</h1>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
+              Start with us
+            </button>
+          </div>
+        </div>
+        <!-- Add more carousel items as needed -->
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Achivement section -->
+    <div class="container">
+      <div class="heading-title">
+        <h1>OUR ACHIEVEMENT</h1>
+      </div>
+      <div class="row g-3 text-center rounded-5">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card shadow-lg achievement-body">
+            <div class="achievement-icon py-3">
+              <i class="fas fa-street-view"></i>
+            </div>
+            <div class="achievement-text pb-2">
+              <h2>2000+</h2>
+              <h5>Total Volunteer</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card shadow-lg achievement-body">
+            <div class="achievement-icon py-3">
+              <i class="fas fa-praying-hands"></i>
+            </div>
+            <div class="achievement-text pb-2">
+              <h2>10+</h2>
+              <h5>Total Blood Donor</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card shadow-lg achievement-body">
+            <div class="achievement-icon py-3">
+              <i class="far fa-calendar-alt"></i>
+            </div>
+            <div class="achievement-text pb-2">
+              <h2>2+</h2>
+              <h5>Total Successful Event</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card shadow-lg achievement-body">
+            <div class="achievement-icon py-3">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="achievement-text pb-2">
+              <h2>3+</h2>
+              <h5>Total University</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card shadow-lg achievement-body">
+            <div class="achievement-icon py-3">
+              <i class="fas fa-clinic-medical"></i>
+            </div>
+            <div class="achievement-text pb-2">
+              <h2>3+</h2>
+              <h5>Total Hospital</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card shadow-lg achievement-body">
+            <div class="achievement-icon py-3">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="achievement-text pb-2">
+              <h2>1+</h2>
+              <h5>Total Local Blood Group</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Event section -->
+    <div class="container event-section">
+      <div class="heading-title">
+        <h1 class="event-title">OUR EVENT</h1>
+      </div>
+      <a href="#" class="btn btn-sm btn-info btn-all">All</a>
+      <div class="row g-3">
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="card shadow-lg event-card">
+            <img
+              src="http://blood.kikinbo.com/storage/uploads/event/1693138752-short_details_modal.jpg"
+              alt="{{$value->name ?? ''}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <div
+                  class="countdown"
+                  data-start="{{ $value->start_date ?? ''}}"
+                  data-end="{{ $value->end_date ?? ''}}"
+                ></div>
+              </h5>
+              <h5 class="card-title">End</h5>
+              <p class="card-text">dshfjds dsjfkhds</p>
+              <p class="card-text">gfredfg refgredsf</p>
+              <p class="card-text">Rajshahi Division, Bangladesh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Blood request section -->
+    <div class="container blood-request-section">
+      <div class="heading-title">
+        <h1 class="blood-request-title">BLOOD REQUEST</h1>
+      </div>
+      <a href="#" class="btn btn-sm btn-info btn-all">All</a>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-lg blood-request-card">
+            <img
+              src="http://blood.kikinbo.com/storage/uploads/hospital/1696391311-UNITED-HOSPITAL.png"
+              class="card-img-top"
+              alt="{{$value->hospital->name ??''}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Request By: Faridul Alam</h5>
+              <!-- <p class="card-text">Contact Number: {{$value->contact_number ??''}}</p> -->
+              <p class="card-text">Patient Problem:Delivery</p>
+              <p class="card-text">Blood Group: O-</p>
+              <p class="card-text">Blood Quantity: 2</p>
+              <p class="card-text">Hospital: UNITED HOSPITAL , Dhaka , Dhaka</p>
+              <div class="text-center mt-2 donate_btn">
+                <a href="{{route('login')}}" class="btn btn-success btn-xs"
+                  >Donate Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Donor -->
+
+    <div class="container top-donor-section">
+      <div class="heading-title">
+        <h1 class="top-donor-title">TOP DONOR</h1>
+      </div>
+      <a href="{{route('donors')}}" class="btn btn-sm btn-info btn-all">All</a>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-lg top-donor-card">
+            <img
+              src="http://blood.kikinbo.com/storage/uploads/donor/default.jpg"
+              class="card-img-top"
+              alt="{{$value->first_name ?? ''}} {{$value->last_name ?? ''}}"
+            />
+
+            <div class="card-body">
+              <h5 class="card-title">Md Mostafizur Rahman</h5>
+              <p class="card-text">Uttara, Dhaka, Dhaka</p>
+              <p class="card-text">Service</p>
+              <p class="card-text">A+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Hospittal -->
+    <div class="container top-hospital-section">
+      <div class="heading-title">
+        <h1 class="top-hospital-title">TOP HOSPITAL</h1>
+      </div>
+      <a href="#" class="btn btn-sm btn-info btn-all">All</a>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-lg top-hospital-card">
+            <img
+              src="http://blood.kikinbo.com/storage/uploads/hospital/1696392016-download.png"
+              class="card-img-top"
+              alt="{{$value->name}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">SQUARE HOSPITALS LTD</h5>
+              <p class="card-text">
+                <a href="tel: 01313718687"
+                  ><i class="fas fa-phone" style="font-size: 14px"></i>&nbsp;
+                  01313718687</a
+                >
+              </p>
+              <p class="card-text">
+                <a href="mailto:info@squarehospital.com"
+                  ><i class="fa fa-envelope" style="font-size: 14px"></i
+                  >&nbsp;info@squarehospital.com</a
+                >
+              </p>
+
+              <p class="card-text mt-1">
+                <a
+                  href="https://www.squarehospital.com/"
+                  style="font-size: small; color: black"
+                  target="_blank"
+                  ><i class="fas fa-link" style="font-size: 15px"></i
+                  >&nbsp;https://www.squarehospital.com/</a
+                >
+              </p>
+              <p class="card-text">
+                <i class="fa fa-tag" style="font-size: 14px"></i>&nbsp;0%
+                Discount
+              </p>
+              <p class="card-text mt-1">
+                <i class="fas fa-hospital" style="font-size: 15px"></i>&nbsp;
+                Panthapath, Dhaka, Bangladesh
+              </p>
+              <p class="card-text">
+                Available Blood Bank : &nbsp;
+                <a href="#" class="rounded-pill">1</a>
+              </p>
+              <p class="card-text">
+                Total Donor : &nbsp;
+                <a href="#" class="rounded-pill">
+                  <span class="badge rounded-pill bg-info">2</span></a
+                >
+              </p>
+              <!-- <p class="card-text">Total Received Blood : &nbsp; <a href="#" class="rounded-pill"></a></p>   -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top University -->
+
+    <div class="container top-university-section">
+      <div class="heading-title">
+        <h1 class="top-university-title">TOP UNIVERSITY</h1>
+      </div>
+      <a href="{{route('university')}}" class="btn btn-sm btn-info btn-all"
+        >All</a
+      >
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-lg top-university-card">
+            <img
+              src="http://blood.kikinbo.com/storage/uploads/university/1696396339-Dhaka-Medical-College.png"
+              class="card-img-top"
+              alt="{{$value->name ?? ''}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dhaka Medical College</h5>
+              <p class="card-text">
+                <a href="tel: 01725516508"
+                  ><i class="fas fa-phone" style="font-size: 14px"></i>&nbsp;
+                  01725516508</a
+                >
+              </p>
+
+              <p class="card-text">
+                <a href="mailto:principal@gmail.com"
+                  ><i class="fa fa-envelope" style="font-size: 14px"></i
+                  >&nbsp;principal@gmail.com</a
+                >
+              </p>
+
+              <p class="card-text mt-1">
+                <a
+                  href="https://www.du.ac.bd/"
+                  style="color: black"
+                  target="_blank"
+                  ><i class="fas fa-link" style="font-size: 15px"></i
+                  >&nbsp;https://www.du.ac.bd/</a
+                >
+              </p>
+              <p class="card-text">
+                <i class="fa fa-tag" style="font-size: 14px"></i>&nbsp; 0%
+                Waiver
+              </p>
+              <p class="card-text mt-1">
+                <i class="fas fa-hospital" style="font-size: 15px"></i
+                >&nbsp;Administrative Building, University of Dhaka, University
+                Street, Nilkhet Road, Dhaka 1000, Bangladesh
+              </p>
+              <p class="card-text">
+                Total Donor : &nbsp;
+                <a href="#" class="rounded-pill">
+                  <span class="badge rounded-pill bg-info">0</span></a
+                >
+              </p>
+              <!-- <p class="card-text">Total Donated Blood : &nbsp; <a href="#" class="rounded-pill"></a></p>   -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Blood Bank -->
+    <div class="container top-blood-bank-section">
+      <div class="heading-title">
+        <h1 class="top-blood-bank-title">TOP BLOOD BANK</h1>
+      </div>
+      <a href="#" class="btn btn-sm btn-info btn-all">All</a>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-lg top-blood-bank-card">
+            <img
+              src="http://blood.kikinbo.com/storage/uploads/bloodbank/1692419555-IMG_5249.jpg"
+              class="card-img-top"
+              alt="{{$value->name ?? ''}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Rajshahi Blood Bank</h5>
+              <p class="card-text">
+                <a href="tel: 01745778990"
+                  ><i class="fas fa-phone" style="font-size: 14px"></i>&nbsp;
+                  01745778990</a
+                >
+              </p>
+              <p class="card-text">
+                <a href="mailto:raj@gmail.com"
+                  ><i class="fa fa-envelope" style="font-size: 14px"></i
+                  >&nbsp;raj@gmail.com</a
+                >
+              </p>
+              <p class="card-text mt-1">
+                <a
+                  href="https://rmc.edu.bd/"
+                  style="color: black"
+                  target="_blank"
+                  ><i class="fas fa-link" style="font-size: 15px"></i
+                  >&nbsp;https://rmc.edu.bd/</a
+                >
+              </p>
+              <p class="card-text">
+                <i class="fa fa-tag" style="font-size: 14px"></i>&nbsp;10%
+                Waiver
+              </p>
+              <p class="card-text mt-1">
+                <i class="fas fa-hospital" style="font-size: 15px"></i
+                >&nbsp;Rajshahi Medical College Hospital,Rajshahi, Rajshahi,
+                Bangladesh
+              </p>
+              <p class="card-text">
+                Total Store Blood : &nbsp;
+                <a href="#" class="rounded-pill">
+                  <span class="badge rounded-pill bg-info">15</span>
+                </a>
+              </p>
+              <!-- <p class="card-text">Total Donated Blood : &nbsp; <a href="#" class="rounded-pill"></a></p>   -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Blood Group -->
+
+    <div class="container top-blood-group-section">
+      <div class="heading-title">
+        <h1 class="top-blood-group-title">TOP BLOOD GROUP</h1>
+      </div>
+      <a href="{{route('blood-group')}}" class="btn btn-sm btn-info btn-all"
+        >All</a
+      >
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-lg top-blood-group-card">
+            <img
+              src="https://scontent.fdac149-1.fna.fbcdn.net/v/t39.30808-6/363391738_684382493716178_665699624110068244_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeEAp5apw19L4bRKyM0V-_ZiiWFB-O3Y5ESJYUH47djkRGSDB47ydo-5TADmpDpTNAbKz9a9KIIqMzteI2kvDuSi&_nc_ohc=BCWyUnrKC5cAX8wm6p1&_nc_ht=scontent.fdac149-1.fna&oh=00_AfD9PvuMbtjRmbT2wZoXr5vOHX6su5_XhCd8o8OMVX6xIA&oe=65261BCA"
+              class="card-img-top"
+              alt="{{$value->name ?? ''}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">HUPBD</h5>
+              <p class="card-text">
+                <a href="tel:01754574784"
+                  ><i class="fas fa-phone" style="font-size: 14px"></i
+                  >&nbsp;01754574784</a
+                >
+              </p>
+              <p class="card-text">
+                <a href="mailto:{{$value->email ?? ''}}"
+                  ><i class="fa fa-envelope" style="font-size: 14px"></i
+                  >&nbsp;hupbd@gmail.com</a
+                >
+              </p>
+              <p class="card-text mt-1">
+                <a href="www.hupbd.org" style="color: black" target="_blank"
+                  ><i class="fas fa-link" style="font-size: 15px"></i
+                  >&nbsp;www.hupbd.org</a
+                >
+              </p>
+
+              <p class="card-text mt-1">
+                <i class="fas fa-hospital" style="font-size: 15px"></i
+                >&nbsp;Dhaka, Bangladesh
+              </p>
+              <p class="card-text">
+                Total Donor : &nbsp;
+                <a href="#" class="rounded-pill">
+                  <span class="badge rounded-pill bg-info">4000</span></a
+                >
+              </p>
+              <!-- <p class="card-text">Total Donated Blood : &nbsp; <a href="#" class="rounded-pill"></a></p>   -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Our Sponsor -->
+    <div class="container">
+      <div class="heading-title">
+        <h1>OUR SPONSORS</h1>
+      </div>
+      <div class="customer-logo slider2">
+        <div class="our-slide">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/images/youtube.png"
+            alt=""
+          />
+        </div>
+        <div class="our-slide">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/images/instagram.png"
+            alt=""
+          />
+        </div>
+        <div class="our-slide">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/images/google.png"
+            alt=""
+          />
+        </div>
+        <div class="our-slide">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/images/nike.png"
+            alt=""
+          />
+        </div>
+        <div class="our-slide">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/images/facebook.png"
+            alt=""
+          />
+        </div>
+        <div class="our-slide">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/images/uber.png"
+            alt=""
+          />
+        </div>
+        <div class="our-slide">
+          <img
+            src="http://blood.kikinbo.com/storage/uploads/images/twitter.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
